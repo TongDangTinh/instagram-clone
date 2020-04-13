@@ -28,9 +28,11 @@
   <div class="row mt-3">
     <%= @posts.each do |post| %>
       <div class="col-4">
-        <div class="insta-post">
-          <%= image_tag post.image.url, class: "img img-fluid" %>
-        </div>
+        <% if post.image_url %>
+          <div class="insta-post">
+            <%= image_tag post.image.url, class: "img img-fluid" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>

@@ -18,7 +18,14 @@
           <% end %>
 
           <div class="post-details">
+            <p><strong><%= post.total_likes %> likes </strong></p>
+            <strong><%= link_to post.account.username, 
+              profile_path(post.account.username), class: "text-dark" %></strong>
             <%= simple_format post.description %>
+
+            <p class="text-muted">
+              <%= time_ago_in_words post.created_at %> ago
+            </p>
           </div>
         </div>
       <% end %>

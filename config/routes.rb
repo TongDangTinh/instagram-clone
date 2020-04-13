@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   # Dashboard 
   get "dashboard", to: "accounts#index"
+
+  resources :posts, only: [:show, :new, :create]
 end

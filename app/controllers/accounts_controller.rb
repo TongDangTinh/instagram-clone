@@ -4,7 +4,7 @@ class AccountsController < ApplicationController
   
   def index
     # User dashboard -post feed
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def profile

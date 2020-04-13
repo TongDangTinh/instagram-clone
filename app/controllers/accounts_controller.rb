@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
 
   def profile
     # User profile
-
+    @posts = @account.posts.all
   end
 
   private

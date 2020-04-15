@@ -56,12 +56,10 @@
 
     <div class="col-4">
       <div class="account-summary">
-        <p>
-          <strong>
+        <p class="m-0">
             <%= link_to image_tag(current_account.image.thumb.url, 
-              class: "rounded-circle mr-3"), 
+              class: "rounded-circle mr-3 float-left"), 
               profile_path(current_account.username) if current_account.image.present? %>
-          </strong>
           <strong><%= current_account.username%></strong><br>
           <%= current_account.full_name %>
         </p>

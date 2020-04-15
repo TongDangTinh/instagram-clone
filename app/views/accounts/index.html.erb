@@ -30,15 +30,22 @@
         </div>
       <% end %>
     </div>
+
     <div class="col-4">
       <div class="account-summary">
         <p>
+          <strong>
+            <%= link_to image_tag(current_account.image.thumb.url, 
+              class: "rounded-circle mr-3"), 
+              profile_path(current_account.username) if current_account.image.present? %>
+          </strong>
           <strong><%= current_account.username%></strong><br>
           <%= current_account.full_name %>
         </p>
       </div>
       <div class="follower-suggestions">
-        
+        <%= link_to "View All", "#", class: "float-right text-muted" %>
+        <p class="text-muted"><strong>Suggestions for you</strong></p>
       </div>
     </div>
   </div>

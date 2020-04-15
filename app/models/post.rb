@@ -3,8 +3,5 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   has_many :likes
-
-  def total_likes
-    0
-  end
+  has_many :comments
 end

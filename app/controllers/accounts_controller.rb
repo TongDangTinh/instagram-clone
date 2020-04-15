@@ -5,6 +5,7 @@ class AccountsController < ApplicationController
   def index
     # User dashboard -post feed
     @posts = Post.all.order("created_at DESC")
+    @comment = Comment.new
 
     following_ids = Follower.where(follower_id: current_account.id).map(&:following_id)
     following_ids << current_account.id

@@ -32,6 +32,19 @@
   }
 
   i.active {
-    color: #555;
+    color: #ff0000;
+  }
+}
+
+.comment-feed {
+  height: 300px;
+  overflow: scroll;
+}
+
+.post-details {
+  .post-actions {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
   }
 }

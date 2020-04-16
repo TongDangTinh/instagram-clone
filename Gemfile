@@ -20,6 +20,8 @@ gem "devise"
 gem "carrierwave", "~> 2.0"
 gem "mini_magick"
 
+gem "pry"
+
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
